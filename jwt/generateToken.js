@@ -1,0 +1,11 @@
+import jwt from "jsonwebtoken";
+
+const  generateToken = (userId)=>{
+    return jwt.sign({userId} , process.env.JWT_TOKEN , {
+        expiresIn : "5d",
+    });
+
+}
+
+
+export default generateToken;
